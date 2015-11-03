@@ -1,0 +1,36 @@
+
+public class sabihlist {
+	
+public mylinklist list;
+ 
+	public void add(int val){
+		
+		mylinklist temp;
+		if (list == null){
+			list = new mylinklist();
+			list.val=val;
+		}
+			else {
+				
+				temp=list;
+				list = new mylinklist();
+				list.val=val;
+				temp.add=list;
+				list=temp;
+			}
+	}
+		
+		public void showall(){
+			mylinklist temp;
+			temp=list;
+			while (temp.add != null)
+			{
+				System.out.println(temp.val);
+				temp=temp.add;
+				
+			}
+			System.out.println(temp.val);
+
+		}
+	}
+
